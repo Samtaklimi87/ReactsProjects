@@ -69,5 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### `snippet search` shortcut keys
- `rfce`  import basic react functions
+### `Snippet`   Shortcut keys
+ `rfce`  => import basic react functions
+
+ `shift+alt+down arrow` => make copy 
