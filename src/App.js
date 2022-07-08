@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import Header from './Header';
-import Content from './Content';
-import Footer from './Footer';
+import Header from "./Header";
+import AddItem from "./AddItem";
+import Content from "./Content";
+import Footer from "./Footer";
 
 function App() {
   const [items, setItems] = useState([
@@ -28,25 +29,26 @@ function App() {
       item.id === id ? { ...item, checked: !item.checked } : item
     );
     setItems(listItems);
-    localStorage.setItem('shoppingList' , JSON.stringify(listItems));
+    localStorage.setItem("shoppingList", JSON.stringify(listItems));
   };
 
   const handleDelete = (id) => {
-    const listItems = items.filter((item) => item.id !== id) ;
+    const listItems = items.filter((item) => item.id !== id);
     setItems(listItems);
-    localStorage.setItem('shoppingList' , JSON.stringify(listItems))
-  }
+    localStorage.setItem("shoppingList", JSON.stringify(listItems));
+  };
 
   return (
     <div className="App">
-    <Header title='Grocery List' />
-    <Content 
-      items={items}
-      setItems={setItems} 
-      handleCheck={handleCheck}
-      handleDelete={handleDelete}
-    />
-    <Footer length={items.length} />
+      <Header title="Grocery List" />
+      <AddItem />
+      <Content
+        items={items}
+        setItems={setItems}
+        handleCheck={handleCheck}
+        handleDelete={handleDelete}
+      />
+      <Footer length={items.length} />
     </div>
   );
 }
