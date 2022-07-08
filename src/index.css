@@ -44,7 +44,7 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow-y: auto;
 }
@@ -74,7 +74,7 @@ ul li::before {
   align-items: center;
   padding: 0.5rem 0 0.5rem 0.5rem;
   margin: 0.25rem 0;
-  background-color: #eee;
+  background-color: #ddd;
 }
 
 .item:first-child {
